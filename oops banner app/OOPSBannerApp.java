@@ -1,19 +1,52 @@
 public class OOPSBannerApp {
 
+    // Pattern for letter O
+    public static String[] getOPattern() {
+        return new String[] {
+            String.join(" ", " *** "),
+            String.join(" ", "*   *"),
+            String.join(" ", "*   *"),
+            String.join(" ", "*   *"),
+            String.join(" ", "*   *"),
+            String.join(" ", "*   *"),
+            String.join(" ", " *** ")
+        };
+    }
+
+    // Pattern for letter P
+    public static String[] getPPattern() {
+        return new String[] {
+            String.join(" ", "**** "),
+            String.join(" ", "*   *"),
+            String.join(" ", "*   *"),
+            String.join(" ", "**** "),
+            String.join(" ", "*    "),
+            String.join(" ", "*    "),
+            String.join(" ", "*    ")
+        };
+    }
+
+    // Pattern for letter S
+    public static String[] getSPattern() {
+        return new String[] {
+            String.join(" ", " ****"),
+            String.join(" ", "*    "),
+            String.join(" ", "*    "),
+            String.join(" ", " *** "),
+            String.join(" ", "    *"),
+            String.join(" ", "    *"),
+            String.join(" ", "**** ")
+        };
+    }
+
     public static void main(String[] args) {
 
-        String[] lines = {
-            String.join(" ", " *** ", " *** ", " ***** ", " ***** "),
-            String.join(" ", "*   *", "*   *", "*     ", "*     "),
-            String.join(" ", "*   *", "*   *", "*     ", "*     "),
-            String.join(" ", "*   *", "*   *", "***** ", "***** "),
-            String.join(" ", "*   *", "*   *", "*     ", "    * "),
-            String.join(" ", "*   *", "*   *", "*     ", "    * "),
-            String.join(" ", " *** ", " *** ", "*     ", "***** ")
-        };
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
 
-        for (String line : lines) {
-            System.out.println(line);
+        for (int i = 0; i < oPattern.length; i++) {
+            System.out.println(oPattern[i] + " " + oPattern[i] + " " + pPattern[i] + " " + sPattern[i]);
         }
     }
 }
